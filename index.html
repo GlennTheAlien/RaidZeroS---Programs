@@ -3,13 +3,8 @@
 	<head>
 		<title>Sköldpaddor - Programs</title>
 		<link rel="icon" href="RobotC.png">
+		<link rel="stylesheet" href="styles.css">
 		<meta charset="utf-8">
-		<style type="text/css">
-			body
-			{
-				background-color: #FFFFCC;
-			}
-		</style>
 	</head>
 
 	<body>
@@ -18,7 +13,9 @@
 		<h2 style="color: navy">Bot 1</h2>
 		<h3 style="color: blue">Blue:</h3>
 		<p>Close to Flags:</p>
-		<pre class="lang-java prettyprint prettyprinted" style=""><code><span>
+		<button class="collapsible" style="color: red">Red Side</button>
+		<div class="content">
+			<pre class="lang-java prettyprint prettyprinted" style=""><code><span>
 #pragma config(Motor,  port1,           openClaw,      tmotorVex393_HBridge, openLoop)
 #pragma config(Motor,  port2,           topLeft,       tmotorVex393_MC29, openLoop)
 #pragma config(Motor,  port3,           bottomLeft,    tmotorVex393_MC29, openLoop)
@@ -199,6 +196,7 @@ task usercontrol()
 		{
 			motor[openClaw]=0;
 		}
+
 		//Shoot Mechanism//
 		if(vexRT[Btn8D]==1)
 		{
@@ -212,11 +210,16 @@ task usercontrol()
 		}
 	}
 }
-	</span></code></pre>
+			</span></code></pre>
+		</div>
 	<p>Far from Flags:</p>
 	<pre><code><span>
 
-	</span></code>></pre>
+	</span></code></pre>
 		<h2>Bot 2:</h2>
+
+
+
+		<script src="collapse.js"></script>
 	</body>
 </html>
